@@ -16,42 +16,42 @@ let restart = document.getElementById('restart');
 let playerScoreElement = document.getElementById('human');
 let computerScoreElement = document.getElementById('comuter');
 
+document.getElementById('human').innerHTML = playerScore;
+document.getElementById('computer').innerHTML = computerScore;
 
-buttons.forEach((button) => {
-    
-    button.addEventListener('click', e =>  {
+buttons.forEach((button) =>
+{
+
+    button.addEventListener('click', e =>
+    {
 
         let computerChoice = variations[Math.floor(Math.random() * (variations.length))];
         console.log(computerChoice);
-        
-        if (computerChoice == 'rock' && button.className = 'paper') {
+
+
+        if (computerChoice == 'rock' && button.className == 'paper') {
             playerScore++;
-        } else if (computerChoice == 'rock' && button.className = 'paper') {
-            playerScore++;
-        } else if (computerChoice == 'rock' && button.className = 'paper') {
-            playerScore++;
-            computerScore++;
-        } else if (computerChoice ==  && playerChoice == button.getElementsByClassName('rock')) {
-            computerScore++;
-        } else if (computerChoice == variations.length[1] && playerChoice == button.getElementsByClassName('scissor')) {
-            playerScore++;
-        } else if (computerChoice == variations.length[1] && playerChoice == button.getElementsByClassName('paper')) {
-            playerScore++;
-            computerScore++;
-        } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('rock')) {
-            computerScore++;
-        } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('paper')) {
-            computerScore++; 
-        } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('scissor')) {
-            playerScore++;
-            computerScore++;
         }
-    })
+    });
+    //     } else if (computerChoice == 'rock' && button.className = 'paper') {
+    //     playerScore++;
+    // } else if (computerChoice == 'rock' && button.className = 'paper') {
+    //     playerScore++;
+    //     computerScore++;
+    // } else if (computerChoice ==  && playerChoice == button.getElementsByClassName('rock')) {
+    //     computerScore++;
+    // } else if (computerChoice == variations.length[1] && playerChoice == button.getElementsByClassName('scissor')) {
+    //     playerScore++;
+    // } else if (computerChoice == variations.length[1] && playerChoice == button.getElementsByClassName('paper')) {
+    //     playerScore++;
+    //     computerScore++;
+    // } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('rock')) {
+    //     computerScore++;
+    // } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('paper')) {
+    //     computerScore++;
+    // } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('scissor')) {
+    //     playerScore++;
+    //     computerScore++;
+
+    // })
 });
-
-
-
-
-//if-anweisung für die Lösungsmöglichkeiten
-// i++ für die Counter
-// eventListener für die Buttons

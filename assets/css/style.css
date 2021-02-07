@@ -6,6 +6,15 @@ body {
     font-family: 'Baloo Chettan 2', cursive;
     color: white;
 }
+h1 {
+    font-size: 3rem;
+    margin-top: 6rem;
+    color: red;
+    text-shadow: white 2px 1px 2px;
+}
+h3 {
+    font-size: 1.5rem;
+}
 
 #rounds,
 #counter {
@@ -18,31 +27,68 @@ body {
 }
 #counter {
     display: flex;
+    height: 5rem;
+}
+#counter p {
+    margin: 0 auto;
 }
 .row1, .row2 {
     text-align: center;
     display: inline-flex;
     
 }
-
 #five,
 #ten,
 #fifteen,
 #twenty {
     font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+.userComp {
+    position: relative;
+    display: flex;
+    height: 3rem;
+    width: 53vw;
+    margin: 0 auto;
+    top: 4.8vh;
+    justify-content: space-between;
+    align-items: baseline;
 }
 .user, .comp {
-    justify-content: space-around;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 3rem;
     height: 2rem;
     background-color: red;
     color: white;
+    border-radius: 5px;
+    top: 4.3vh;
+}
+.dots {
+    font-size: 1.2rem;
+}
+#human, #computer {
+    position: relative;
+    color: white;
+    font-size: 3rem;
+    top: .3rem;
+}
+#human {
+    padding-left: 3rem;
+}
+#computer {
+    padding-right: 3rem;
 }
 button {
     width: 3.5rem;
     height: 3.5rem;
     border-radius: 100%;
-    /* background-color: black; */
+    background-color: black;
+    border: 1px solid white;
+}
+.scissor {
+    transform: rotate(90deg);
 }
 button > img {
     color: white;
