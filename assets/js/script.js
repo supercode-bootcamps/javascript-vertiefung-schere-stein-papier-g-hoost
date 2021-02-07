@@ -16,12 +16,36 @@ let restart = document.getElementById('restart');
 let playerScoreElement = document.getElementById('human');
 let computerScoreElement = document.getElementById('comuter');
 
-let computerChoice = Math.round(Math.random() * (variations.length));
-console.log(computerChoice);
 
 buttons.forEach((button) => {
+    
     button.addEventListener('click', e =>  {
-        console.log(button.className);
+
+        let computerChoice = variations[Math.floor(Math.random() * (variations.length))];
+        console.log(computerChoice);
+        
+        if (computerChoice == 'rock' && button.className = 'paper') {
+            playerScore++;
+        } else if (computerChoice == 'rock' && button.className = 'paper') {
+            playerScore++;
+        } else if (computerChoice == 'rock' && button.className = 'paper') {
+            playerScore++;
+            computerScore++;
+        } else if (computerChoice ==  && playerChoice == button.getElementsByClassName('rock')) {
+            computerScore++;
+        } else if (computerChoice == variations.length[1] && playerChoice == button.getElementsByClassName('scissor')) {
+            playerScore++;
+        } else if (computerChoice == variations.length[1] && playerChoice == button.getElementsByClassName('paper')) {
+            playerScore++;
+            computerScore++;
+        } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('rock')) {
+            computerScore++;
+        } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('paper')) {
+            computerScore++; 
+        } else if (computerChoice == variations.length[2] && playerChoice == button.getElementsByClassName('scissor')) {
+            playerScore++;
+            computerScore++;
+        }
     })
 });
 
