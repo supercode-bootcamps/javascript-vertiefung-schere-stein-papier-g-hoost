@@ -32,18 +32,27 @@ h3 {
 #counter p {
     margin: 0 auto;
 }
+.roundContainer {
+    display: flexbox;
+    justify-content: space-evenly;
+}
 .row1, .row2 {
     text-align: center;
+    width: 20rem;
     display: inline-flex;
-    
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    margin: 2rem;
 }
-#five,
-#ten,
-#fifteen,
-#twenty {
-    font-size: 1.5rem;
-    padding: 1rem 2rem;
+
+input {
+    width: 2rem;
+    height: 2rem;
+    background-color: black;
+    font-size: 2rem;
 }
+
 .userComp {
     position: relative;
     display: flex;
