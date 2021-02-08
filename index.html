@@ -16,12 +16,12 @@
             <h3>how many rounds?</h3>
             <div class="roundContainer">
                 <div class="row1">
-                    <input type="radio" id="five" name="value" placeholder=".5"><span>5</span></input>
-                    <input type="radio" id="ten" placeholder=".10"><span>10</span></input><br>
+                    <input type="radio" name="rounds" value="5" placeholder=".5" checked="true"><span>5</span></input>
+                    <input type="radio" name="rounds" value="10" placeholder=".10"><span>10</span></input><br>
                 </div><br>
                 <div class="row2">
-                    <input type="radio" id="fifteen" placeholder=".15"><span>15</span></input>
-                    <input type="radio" id="twenty" placeholder=".20"><span>20</span></input>
+                    <input type="radio" name="rounds" value="15" placeholder=".15"><span>15</span></input>
+                    <input type="radio" name="rounds" value="20" placeholder=".20"><span>20</span></input>
                 </div>
             </div>
         </div>
@@ -31,11 +31,14 @@
             <p class="comp">COMP</p>
 
         </div>
+        <div>
+            <h2 id="letsPlay"></h2>
+        </div>
         <div id="counter">
             <p id="human"></p>
             <p id="computer"></p>
         </div>
-        <h2>Let's play</h2>
+
         <div id="symbols">
             <button class="rock"><img src="assets/img/003-fist.png" alt="fist"></button>
             <button class="paper"><img src="assets/img/001-stop.png" alt="stop"></button>
