@@ -9,16 +9,16 @@ body {
 h1 {
     font-size: 3rem;
     margin-top: 6rem;
-    color: red;
+    color: #ff0000;
     text-shadow: white 2px 1px 2px;
 }
 h2 {
     font-size: 2rem;
+    height: 3rem;
 }
 h3 {
     font-size: 1.5rem;
 }
-
 #rounds,
 #counter {
     width: 500px;
@@ -61,7 +61,7 @@ input {
     height: 3rem;
     width: 53vw;
     margin: 0 auto;
-    top: 7.5vh;
+    top: 14.5vh;
     justify-content: space-between;
     align-items: baseline;
 }
@@ -96,7 +96,7 @@ button {
     height: 3.5rem;
     border-radius: 100%;
     background-color: black;
-    border: 1px solid white;
+    border: 2px solid white;
 }
 .scissor {
     transform: rotate(90deg);
@@ -105,4 +105,13 @@ button > img {
     color: white;
     height: 2.5rem;
     width: 2.5rem;
+    border-radius: 100%;
+}
+h4 {
+    font-size: 1.5rem;
+    color: red;
+    margin: 0;
+}
+#restart {
+    font-size: 2rem;
 }
