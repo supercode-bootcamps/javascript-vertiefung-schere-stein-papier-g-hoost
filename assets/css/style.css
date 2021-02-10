@@ -59,9 +59,9 @@ input {
     position: relative;
     display: flex;
     height: 3rem;
-    width: 53vw;
+    width: 34rem;
     margin: 0 auto;
-    top: 14.5vh;
+    top: 13vh;
     justify-content: space-between;
     align-items: baseline;
 }

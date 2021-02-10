@@ -10,7 +10,7 @@ const buttons = document.querySelectorAll('#symbols button');
 let variations = ['rock', 'paper', 'scissor']
 
 let restart = document.getElementById('restart');
-let letsPlayText = document.getElementById('letsPlay').innerHTML
+let letsPlayText = document.getElementById('letsPlay').innerHTML = "Let's play!";
 
 let rock = document.getElementsByClassName('rock');
 let paper = document.getElementsByClassName('paper');
@@ -98,3 +98,6 @@ showPoints(playerScore, computerScore);
 //         document.getElementById('letsPlay').innerHTML = 'GAME OVER, COMPUTER WINS!'
 //     }
 // };
+
+//Let's Play wird am Anfag nicht mehr gezeigt.
+//Was tun mit den Pull-Requests?
