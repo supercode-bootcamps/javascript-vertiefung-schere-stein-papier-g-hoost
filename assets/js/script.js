@@ -6,15 +6,17 @@ const pScore = document.getElementById('human');
 const cScore = document.getElementById('computer');
 let letsPlay = document.getElementById('letsPlay');
 
-const buttons = document.querySelectorAll('#symbols button');
+let buttons = document.querySelectorAll('#symbols button');
 let variations = ['rock', 'paper', 'scissor']
 
 let restart = document.getElementById('restart');
-let letsPlayText = document.getElementById('letsPlay').innerHTML = "Let's play!";
+letsPlay.innerHTML = "Let's play!";
 
 let rock = document.getElementsByClassName('rock');
 let paper = document.getElementsByClassName('paper');
 let scissor = document.getElementsByClassName('scissor');
+let lizard = document.getElementsByClassName('lizard');
+let spock = document.getElementsByClassName('spock');
 
 function showPoints(home, computer)
 {
@@ -25,19 +27,24 @@ function showPoints(home, computer)
 
 restart.addEventListener('click', e => 
 {
-    playerScore = 0;
-    computerScore = 0;
-    round = 0;
-    showPoints(0, 0);
-    document.getElementById('letsPlay').innerHTML = "Let's play!";
-
+    location.reload();
 });
 
+function resetButtonColor()
+{
+    buttons.forEach(x =>
+    {
+        console.log(x);
+        x.style.backgroundColor = "";
+    });
+};
 
 buttons.forEach((button) =>
 {
     button.addEventListener('click', e =>
     {
+
+        resetButtonColor();
         document.getElementById('letsPlay').innerHTML = "Let's play!";
         let computerChoice = variations[Math.floor(Math.random() * (variations.length))];
 
@@ -48,29 +55,98 @@ buttons.forEach((button) =>
 
         if (computerChoice === 'rock' && button.className === 'paper') {
             playerScore++;
-            e.target.style.backgroundColor = "Green";
-            document.getElementById('letsPlay').innerHTML = "Paper (user) beats rock (computer)";
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";
+            document.getElementById('letsPlay').innerHTML = "Paper (user) wraps rock (computer)"
         } else if (computerChoice === 'rock' && button.className === 'scissor') {
             computerScore++;
-            e.target.style.backgroundColor = "Red";
-            document.getElementById('letsPlay').innerHTML = "Rock (computer) beats scissor (user)";
-        } else if (computerChoice === 'paper' && button.className === 'rock') {
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Rock (computer) whets scissor (user)";
+        } else if (computerChoice === 'rock' && button.className === 'lizard') {
+            playerScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Rock (player) squashes lizard (user)";
+        } else if (computerChoice === 'rock' && button.className === 'spock') {
+            playerScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Rock (computer) is vaporized by Spock (user)";
+        }
+        else if (computerChoice === 'paper' && button.className === 'rock') {
             computerScore++;
-            e.target.style.backgroundColor = "Green";
-            document.getElementById('letsPlay').innerHTML = "Paper (computer) beats rock (user)";
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Paper (computer) wraps rock (user)";
         } else if (computerChoice === 'paper' && button.className === 'scissor') {
             playerScore++;
-            e.target.style.backgroundColor = "Red";
-            document.getElementById('letsPlay').innerHTML = "Scissor (user) beats paper (computer)";
-        } else if (computerChoice === 'scissor' && button.className === 'rock') {
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Paper (computer) is cut by scissor (user)";
+        }
+        else if (computerChoice === 'paper' && button.className === 'lizard') {
             playerScore++;
-            e.target.style.backgroundColor = "Green";
-            document.getElementById('letsPlay').innerHTML = "Rock (user) beats scissor (computer)";
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Paper (computer) is eaten by lizard (user)";
+        }
+        else if (computerChoice === 'paper' && button.className === 'spock') {
+            computerScore++;
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Paper (computer) rebutes Spock (user)";
+        }
+        else if (computerChoice === 'scissor' && button.className === 'lizard') {
+            computerScore++;
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Scissor (computer) beheads lizard (user)";
+        }
+        else if (computerChoice === 'scissor' && button.className === 'spock') {
+            playerScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Scissor (computer) is smashed by Spock (user)";
+        }
+        else if (computerChoice === 'scissor' && button.className === 'rock') {
+            playerScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Scissor (computer) is whet by rock (user)";
         } else if (computerChoice === 'scissor' && button.className === 'paper') {
             computerScore++;
-            e.target.style.backgroundColor = "Red";
-            document.getElementById('letsPlay').innerHTML = "Scissor (computer) beats paper (user)";
-        } else if (computerChoice === button.className) {
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Scissor (computer) cuts paper (user)";
+        } else if (computerChoice === 'lizard' && button.className === 'paper') {
+            userScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Lizard (computer) eats paper (user)";
+        } else if (computerChoice === 'lizard' && button.className === 'rock') {
+            playerScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Lizard (computer) is smashed by rock (user)";
+        }
+        else if (computerChoice === 'lizard' && button.className === 'sicssor') {
+            playerScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Lizard (computer) is beheaded by scissor (user)";
+        }
+        else if (computerChoice === 'lizard' && button.className === 'spock') {
+            computerScore++;
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Lizard (computer) poisons Spock (user)";
+        }
+        else if (computerChoice === 'spock' && button.className === 'rock') {
+            computerScore++;
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Spock (computer) evaporates rock (user)";
+        }
+        else if (computerChoice === 'spock' && button.className === 'paper') {
+            playerScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Spock (computer) is rebuted by paper (user)";
+        }
+        else if (computerChoice === 'spock' && button.className === 'scissor') {
+            computerScore++;
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Spock (computer) smashes scissor (user)";
+        }
+        else if (computerChoice === 'spock' && button.className === 'lizard') {
+            playerScore++;
+            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            document.getElementById('letsPlay').innerHTML = "Spock (computer) is poisoned by lizard (user)";
+        }
+        else if (computerChoice === button.className) {
             computerScore + 0;
             playerScore + 0;
             document.getElementById('letsPlay').innerHTML = "It was a draw! You both chose " + button.className;
@@ -78,26 +154,16 @@ buttons.forEach((button) =>
         round++;
         showPoints(playerScore, computerScore);
 
+        let numberOfRounds = document.querySelector('input[name="rounds"]:checked').value;
 
-        if (document.querySelector('input[name="rounds"]:checked').value == round) {
-            document.getElementById('letsPlay').innerHTML = 'GAME OVER';
+        if (numberOfRounds == round) {
+            buttons.forEach(button =>
+            {
+                button.disabled = true;
+            });
+            letsPlay.innerHTML = (playerScore > computerScore) ? 'GAME OVER, PLAYER WINS' : 'GAME OVER, COMPUTER WINS';
         };
-
-
     });
 
 });
 showPoints(playerScore, computerScore);
-
-
-// function whoWon()
-// {
-//     if (playerScore > computerScore) {
-//         document.getElementById('letsPlay').innerHTML = 'GAME OVER, YOU WIN!'
-//     } else {
-//         document.getElementById('letsPlay').innerHTML = 'GAME OVER, COMPUTER WINS!'
-//     }
-// };
-
-//Let's Play wird am Anfag nicht mehr gezeigt.
-//Was tun mit den Pull-Requests?
