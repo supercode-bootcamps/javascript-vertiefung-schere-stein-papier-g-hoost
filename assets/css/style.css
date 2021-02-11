@@ -65,7 +65,7 @@ input {
     height: 3rem;
     width: 34rem;
     margin: 0 auto;
-    top: 13vh;
+    top: 12.5vh;
     justify-content: space-between;
     align-items: baseline;
 }
@@ -73,8 +73,8 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3rem;
-    height: 2rem;
+    width: 4rem;
+    height: 3rem;
     background-color: red;
     color: white;
     border-radius: 5px;
