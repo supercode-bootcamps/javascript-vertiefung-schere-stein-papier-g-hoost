@@ -34,7 +34,6 @@ function resetButtonColor()
 {
     buttons.forEach(x =>
     {
-        console.log(x);
         x.style.backgroundColor = "";
     });
 };
