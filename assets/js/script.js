@@ -156,12 +156,18 @@ buttons.forEach((button) =>
 
         let numberOfRounds = document.querySelector('input[name="rounds"]:checked').value;
 
+
         if (numberOfRounds == round) {
+
             buttons.forEach(button =>
             {
                 button.disabled = true;
             });
-            letsPlay.innerHTML = (playerScore > computerScore) ? 'GAME OVER, PLAYER WINS' : 'GAME OVER, COMPUTER WINS';
+            function timeout()
+            {
+                letsPlay.innerHTML = (playerScore > computerScore) ? 'GAME OVER, PLAYER WINS' : 'GAME OVER, COMPUTER WINS';
+            };
+            setTimeout(timeout, 1000);
         };
     });
 

@@ -3,7 +3,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     background: url(../img/Spock_icon.png), radial-gradient(70% 30% at center, red, black);
-    /* background-image: url(../img/Spock_icon.png); */
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
