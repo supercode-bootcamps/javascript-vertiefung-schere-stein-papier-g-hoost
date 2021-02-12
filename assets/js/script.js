@@ -122,8 +122,8 @@ buttons.forEach((button) =>
             document.getElementById('letsPlay').innerHTML = "Scissors (user) behead lizard (computer)";
         }
         else if (computerChoice === 'lizard' && button.className === 'spock') {
-            playerScore++;
-            button.style.backgroundColor = "Green", button.style.transition = ".5s";;
+            computerScore++;
+            button.style.backgroundColor = "Red", button.style.transition = ".5s";;
             document.getElementById('letsPlay').innerHTML = "Lizard (computer) poisons Spock (user)";
         }
         else if (computerChoice === 'spock' && button.className === 'rock') {
