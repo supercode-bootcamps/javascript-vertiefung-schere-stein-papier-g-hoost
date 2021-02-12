@@ -7,7 +7,7 @@ const cScore = document.getElementById('computer');
 let letsPlay = document.getElementById('letsPlay');
 
 let buttons = document.querySelectorAll('#symbols button');
-let variations = ['rock', 'paper', 'scissor']
+let variations = ['rock', 'paper', 'scissor', 'lizard', 'spock']
 
 let restart = document.getElementById('restart');
 letsPlay.innerHTML = "Let's play!";
@@ -87,7 +87,7 @@ buttons.forEach((button) =>
         else if (computerChoice === 'paper' && button.className === 'spock') {
             computerScore++;
             button.style.backgroundColor = "Red", button.style.transition = ".5s";;
-            document.getElementById('letsPlay').innerHTML = "Spock (user) is rebuted by paper (computer)";
+            document.getElementById('letsPlay').innerHTML = "Paper (computer) rebutes Spock (user)";
         }
         else if (computerChoice === 'scissor' && button.className === 'lizard') {
             computerScore++;
@@ -114,7 +114,7 @@ buttons.forEach((button) =>
         } else if (computerChoice === 'lizard' && button.className === 'rock') {
             playerScore++;
             button.style.backgroundColor = "Green", button.style.transition = ".5s";;
-            document.getElementById('letsPlay').innerHTML = "Rock (computer) smashes lizard (user)";
+            document.getElementById('letsPlay').innerHTML = "Rock (user) smashes lizard (computer)";
         }
         else if (computerChoice === 'lizard' && button.className === 'sicssor') {
             playerScore++;
@@ -139,12 +139,12 @@ buttons.forEach((button) =>
         else if (computerChoice === 'spock' && button.className === 'scissor') {
             computerScore++;
             button.style.backgroundColor = "Red", button.style.transition = ".5s";;
-            document.getElementById('letsPlay').innerHTML = "Spock (computer) smashes scissor (user)";
+            document.getElementById('letsPlay').innerHTML = "Spock (computer) smashes scissors (user)";
         }
         else if (computerChoice === 'spock' && button.className === 'lizard') {
             playerScore++;
             button.style.backgroundColor = "Green", button.style.transition = ".5s";;
-            document.getElementById('letsPlay').innerHTML = "Spock (computer) is poisoned by lizard (user)";
+            document.getElementById('letsPlay').innerHTML = "Lizard (user) poisons Spock (computer)";
         }
         else if (computerChoice === button.className) {
             computerScore + 0;
